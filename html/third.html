@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: #6da1d1;
+        border: 3px solid #0e477c;
+        border-radius: 50px;
+        margin: 20px 20px;
+        position: relative;
+        animation: move 3s ease-in-out 2s infinite alternate backwards;
+      }
+
+      @keyframes move {
+        0% {
+          left: 400px;
+          top: 20px;
+          transform: rotate(0deg);
+        }
+        33.3% {
+          left: 800px;
+          top: 500px;
+          transform: rotate(360deg);
+        }
+        66.6% {
+          left: 0px;
+          top: 500px;
+          transform: rotate(0deg);
+        }
+        100% {
+          left: 400px;
+          top: 20px;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

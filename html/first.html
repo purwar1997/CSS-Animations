@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      div {
+        height: 150px;
+        width: 150px;
+        background-color: #7fffd4;
+        margin: 20px 20px;
+        border-radius: 20px;
+        position: relative;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-play-state: running;
+      }
+
+      @keyframes move {
+        0% {
+          left: 0px;
+          top: 0px;
+          background-color: #b586e2;
+        }
+        25% {
+          left: 400px;
+          top: 0px;
+          background-color: #8383d5;
+        }
+        50% {
+          left: 400px;
+          top: 400px;
+          background-color: #288282;
+        }
+        75% {
+          left: 0px;
+          top: 400px;
+          background-color: #134676;
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+          background-color: #7fffd4;
+        }
+      }
+
+      p {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: verdana;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: auto;
+        animation: text 4s linear 1s 2 alternate both running;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state */
+      }
+
+      @keyframes text {
+        0% {
+          font-size: 40px;
+        }
+        25% {
+          font-size: 50px;
+        }
+        50% {
+          font-size: 60px;
+        }
+        75% {
+          font-size: 50px;
+        }
+        100% {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div><p>div</p></div>
+  </body>
+</html>
