@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+
+      /* universal selector selects all the elements */
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+      }
+
+      body {
+        background: linear-gradient(90deg, #044da7 0%, #a5e0e5 100%);
+        color: white;
+        font-family: "Montserrat";
+      }
+
+      .wrapper {
+        margin: 5vw auto;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .left,
+      .right {
+        height: 100px;
+        width: 100px;
+        border: 3px solid #1b1b1b;
+        background-color: #ffffff;
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* animation shorthand property */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      }
+
+      @keyframes pulse1 {
+        from {
+          transform: scale(1, 1);
+        }
+        to {
+          transform: scale(1.5, 1.5);
+        }
+      }
+
+      @keyframes pulse2 {
+        0% {
+          transform: scale(0, 0);
+        }
+        100% {
+          transform: scale(1.3, 1.3);
+        }
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes skew {
+        0%,
+        50%,
+        100% {
+          transform: skewX(0deg);
+        }
+        25% {
+          transform: skewX(-40deg);
+        }
+        75% {
+          transform: skewX(40deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="wrapper">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+      h1 {
+        font-size: 50px;
+        font-weight: 900;
+        font-family: "Montserrat";
+        position: relative;
+        /* animation: from-above 1s ease 1s 1 both; */
+        /* animation: from-below 1s ease 1s 1 both; */
+        /* animation: from-left 1s ease 1s 1 both; */
+        /* animation: from-right 1s ease 1s 1 both; */
+        animation: fadeout 1s linear 1s 2 alternate;
+      }
+
+      @keyframes from-above {
+        0% {
+          text-align: center;
+          top: -10vh;
+          font-size: 30px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+        90% {
+          text-align: center;
+          top: 40vh;
+          font-size: 45px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        100% {
+          text-align: center;
+          top: 30vh;
+          font-size: 65px;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+
+      @keyframes from-below {
+        0% {
+          text-align: center;
+          top: 100vh;
+          font-size: 30px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+        70% {
+          text-align: center;
+          top: 25vh;
+          font-size: 45px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        100% {
+          text-align: center;
+          top: 35vh;
+          font-size: 65px;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+
+      @keyframes from-left {
+        0% {
+          top: 40vh;
+          left: -25vw;
+          font-size: 30px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+        70% {
+          top: 40vh;
+          left: 50vw;
+          font-size: 45px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        100% {
+          top: 35vh;
+          left: 30vw;
+          font-size: 65px;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+
+      @keyframes from-right {
+        0% {
+          top: 40vh;
+          left: 100vw;
+          font-size: 30px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+        70% {
+          top: 40vh;
+          left: 15vw;
+          font-size: 45px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        100% {
+          top: 35vh;
+          left: 30vw;
+          font-size: 65px;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          left: 0px;
+          color: rgba(30, 30, 30, 1);
+        }
+        to {
+          left: 800px;
+          color: rgba(30, 30, 30, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Good Morning!</h1>
+  </body>
+</html>

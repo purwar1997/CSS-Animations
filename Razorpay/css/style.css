@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  background-color: #4e4949;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  height: 80vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(219, 11, 94, 0.469) 0%,
+      rgba(111, 0, 237, 0.784) 100%
+    ),
+    url(../image/pexels-hitesh-choudhary-569314.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(100% 1%, 100% 89%, 86% 100%, 0 78%, 0 0);
+}
+
+header h1 {
+  font-size: 60px;
+  color: #ebe1e1;
+  padding-top: 10%;
+  padding-left: 6%;
+}
+
+header h2 {
+  font-size: 40px;
+  color: #ebe1e1;
+  padding-left: 6%;
+  margin-top: 2%;
+}
