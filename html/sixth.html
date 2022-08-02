@@ -39,9 +39,9 @@
         background-color: #ffffff;
         animation-name: rotate;
         animation-duration: 1s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: linear;
         animation-iteration-count: infinite;
-        animation-direction: alternate;
+        animation-direction: normal;
         /* animation shorthand property */
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       }
@@ -69,21 +69,35 @@
           transform: rotate(0deg);
         }
         100% {
-          transform: rotate(360deg);
+          transform: rotate(3600deg);
         }
       }
 
-      @keyframes skew {
+      @keyframes skewX {
         0%,
         50%,
         100% {
           transform: skewX(0deg);
         }
         25% {
-          transform: skewX(-40deg);
+          transform: skewX(-30deg);
         }
         75% {
-          transform: skewX(40deg);
+          transform: skewX(30deg);
+        }
+      }
+
+      @keyframes skewY {
+        0%,
+        50%,
+        100% {
+          transform: skewY(0deg);
+        }
+        25% {
+          transform: skewY(-30deg);
+        }
+        75% {
+          transform: skewY(30deg);
         }
       }
     </style>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(to bottom, #fd297a 5%, #9424f0);
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #f6f1f1;
+        border-radius: 20px;
+        margin: 40px 40px;
+        animation: shift 5s linear 1s infinite alternate backwards;
+      }
+
+      @keyframes shift {
+        0% {
+          transform: translate(800px, 0px);
+        }
+        20% {
+          transform: translate(200px, 0px);
+        }
+        40% {
+          transform: translate(200px, 250px);
+        }
+        60% {
+          transform: translate(800px, 250px);
+        }
+        80% {
+          transform: translate(800px, 500px);
+        }
+        100% {
+          transform: translate(200px, 500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
